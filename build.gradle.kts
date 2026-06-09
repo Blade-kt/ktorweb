@@ -26,7 +26,18 @@ dependencies {
     implementation("org.reflections:reflections:0.10.2")
 }
 
-tasks.register<Jar>("fatJar") {
+tasks.register<JavaExec>("launchServer") {
+    group = "ktorweb"
+    description = "Launches this pizdec"
+
+    mainClass.set("me.blade.ktorweb.MainKt")
+    classpath = sourceSets.main.get().runtimeClasspath
+    workingDir = File("${project.projectDir.absolutePath}/run")
+    dependsOn("build")
+}
+
+tasks.register<Jar>("buildFatJar") {
+    group = "ktorweb"
     description = "Bundles this pizdec"
     archiveClassifier.set("all")
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
