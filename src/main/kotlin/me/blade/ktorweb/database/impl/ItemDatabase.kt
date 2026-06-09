@@ -6,6 +6,7 @@ import org.jdom2.input.SAXBuilder
 import java.util.concurrent.CopyOnWriteArrayList
 import kotlin.math.roundToInt
 
+// TEMP: SERVER LIFETIME ONLY
 class ItemDatabase(
     private val xml: String
 ) : IItemDatabase {

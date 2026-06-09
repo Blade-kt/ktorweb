@@ -5,6 +5,7 @@ import me.blade.ktorweb.database.IUserDatabase
 import me.blade.ktorweb.database.obj.UserEntry
 import java.util.concurrent.ConcurrentHashMap
 
+// TEMP: SERVER LIFETIME ONLY
 class UserDatabase : IUserDatabase {
     private val userMap = ConcurrentHashMap<String, UserEntry>()
     override val instances get() = userMap.values
