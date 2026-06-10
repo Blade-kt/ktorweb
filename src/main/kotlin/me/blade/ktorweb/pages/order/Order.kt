@@ -4,7 +4,6 @@ import io.ktor.http.encodeURLParameter
 import io.ktor.server.response.respondRedirect
 import kotlinx.css.*
 import kotlinx.css.properties.AspectRatio
-import kotlinx.css.properties.BoxShadow
 import kotlinx.css.properties.BoxShadowInset
 import kotlinx.css.properties.TextDecoration
 import kotlinx.html.*
@@ -16,7 +15,6 @@ import me.blade.ktorweb.pages._Page
 import me.blade.ktorweb.prefabs.buttonStyles
 import me.blade.ktorweb.prefabs.color
 import me.blade.ktorweb.prefabs.css
-import me.blade.ktorweb.prefabs.margin
 import me.blade.ktorweb.prefabs.padding
 import kotlin.collections.component1
 import kotlin.collections.component2

@@ -23,6 +23,7 @@ import kotlinx.html.HTML
 import kotlinx.html.body
 import kotlinx.html.head
 import kotlinx.html.title
+import kotlinx.html.unsafe
 import me.blade.ktorweb.KtorWeb
 import me.blade.ktorweb.confs.RoutingContext
 import me.blade.ktorweb.database.obj.UserEntry

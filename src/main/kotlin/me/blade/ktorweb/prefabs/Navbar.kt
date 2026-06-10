@@ -22,7 +22,7 @@ fun BODY.navbar(currentPage: _Page, user: UserEntry) {
         div {
             css {
                 backgroundImage = linearGradient(sideOrCorner = GradientSideOrCorner.ToRight, false) {
-                    colorStop(KtorWeb.colorPalette.havbar1)
+                    colorStop(KtorWeb.colorPalette.havbar2)
                     colorStop(KtorWeb.colorPalette.havbar2)
                 }
 
@@ -43,7 +43,7 @@ fun BODY.navbar(currentPage: _Page, user: UserEntry) {
             div(classes = "logo") {
                 a(href = "/") {
                     css {
-                        color = Color.white
+                        color = KtorWeb.colorPalette.textPrimary
                         fontSize = 1.5.rem
                         fontWeight = FontWeight.bold
                         textDecoration = TextDecoration.none

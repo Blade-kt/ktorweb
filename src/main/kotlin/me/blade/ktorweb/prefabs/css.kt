@@ -25,7 +25,6 @@ import kotlinx.css.properties.Transition
 import kotlinx.css.properties.s
 import kotlinx.css.px
 import kotlinx.css.rem
-import kotlinx.css.tr
 import kotlinx.css.transition
 import kotlinx.html.CommonAttributeGroupFacade
 import kotlinx.html.style
@@ -35,7 +34,8 @@ fun CommonAttributeGroupFacade.css(block: CssBuilder.() -> Unit) {
     style = CssBuilder().apply(block).toString()
 }
 
-fun CssBuilder.buttonStyles(active: Boolean = false, shadow: Boolean = false) {
+fun CssBuilder.buttonStyles(active: Boolean = false, shadow: Boolean = false, color: Color = KtorWeb.colorPalette.textSecondary) {
+    this.color = color
     fontSize = 0.8.rem
     fontWeight = FontWeight.bold
     padding = Padding(0.5.rem, 1.rem)
@@ -48,7 +48,7 @@ fun CssBuilder.buttonStyles(active: Boolean = false, shadow: Boolean = false) {
 
     if (active) {
         backgroundColor = KtorWeb.colorPalette.havbar1.desaturate(50).darken(20)
-        color = Color.white
+        this.color = Color.white
 
         boxShadow += BoxShadowInset(
             Color.black.withAlpha(0.1),
